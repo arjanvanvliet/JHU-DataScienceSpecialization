@@ -1,0 +1,49 @@
+---
+title: "Leaflet Map - Government and Royals in The Hague"
+author: "Arjan van Vliet"
+date: "12/25/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# The Hague Landmarks
+
+This simple Leaflet map shows some landmarks in The Hague. It has the parliaments building and two royal palaces.
+
+```{r message=FALSE, echo=FALSE}
+library(leaflet)
+
+# Binnenhof (52.07961, 4.3118729) | 
+# Paleis Noordeinde (52.0808981,4.3042691) | 
+# Paleis Huis ten Bosch (52.0930525,4.341628) | 
+th_df <- data.frame(lat = c(52.07961, 52.0808981, 52.0930525),
+                    lng = c(4.3118729, 4.3042691, 4.341628),
+                    type = c("binnenhof", "noordeinde", "huisTenBosch"))
+
+th_icons <- iconList(
+  binnenhof = makeIcon(
+    iconUrl = "https://upload.wikimedia.org/wikipedia/commons/b/b3/Logo_rijksoverheid.svg",
+    iconWidth = 75, iconHeight = 60,
+    iconAnchorX = 38, iconAnchorY = 30),
+  noordeinde = makeIcon(
+      iconUrl = "https://t1.rbxcdn.com/7eaee8de7b40c3ec7e4a9ea4ace8999c",
+      iconWidth = 75, iconHeight = 75),
+  huisTenBosch = makeIcon(
+      iconUrl = "https://upload.wikimedia.org/wikipedia/commons/a/a1/Royal_Standard_of_the_Netherlands.PNG",
+      iconWidth = 60, iconHeight = 60)
+  )
+
+th_sites <- c("<a href=\"https://en.wikipedia.org/wiki/Binnenhof\" target=_blank>Binnenhof (Wikipedia)</a>",
+              "<a href=\"https://en.wikipedia.org/wiki/Noordeinde_Palace\" target=_blank>Noordeinde Palace (Wikipedia)</a>",
+              "<a href=\"https://en.wikipedia.org/wiki/Huis_ten_Bosch_palace\" target=_blank>Huis ten Bosch Palace (Wikipedia)</a>")
+
+th_df %>%
+    leaflet() %>%
+    addTiles() %>%
+    addMarkers(icon = ~th_icons[type], popup = th_sites)
+
+```
+
