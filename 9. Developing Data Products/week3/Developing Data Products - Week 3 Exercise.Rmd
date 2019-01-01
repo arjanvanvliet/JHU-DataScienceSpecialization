@@ -1,0 +1,26 @@
+---
+title: "Developing Data Products - Week 3 Exercise"
+author: "Arjan van Vliet"
+date: "12/31/2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Orange Tree Circumference over Time
+
+Simple chart showing the circumference increase for 5 different orange trees over time.
+
+```{r Orange, message=FALSE}
+library(plotly)
+
+Orange$Tree <- factor(Orange$Tree, levels = c(5, 4, 3, 2, 1))
+plot_ly(Orange, x=~age, y=~circumference,
+        type = "scatter", mode = "lines",
+        color = ~factor(Tree),
+        hoverinfo = 'text',
+        text = ~paste("Age: ", age, ' days<br>Circumference:', circumference, ' mm'))
+```
+
