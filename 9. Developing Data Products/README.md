@@ -21,10 +21,10 @@ For this assignment the 'Orange' dataset (that comes with R) was used to plot tr
 The resulting presentation with plotly plot can be viewed using [GitHub Pages](https://arjanvanvliet.github.io/JHU-DataScienceSpecialization/9.%20Developing%20Data%20Products/week3/Developing_Data_Products_-_Week_3_Exercise.html).
 
 ### Week 4 course project
-This week's assignment had two parts. First, to create a Shiny application and deploy it on Rstudio's servers. Second, use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about your application.
+This week's assignment had two parts. First, to create a Shiny application and deploy it on RStudio's servers. Second, use Slidify or RStudio Presenter to prepare a reproducible pitch presentation about your application.
 
 For this assignment the 'ChickWeight' dataset (that come with R) was used to create a simple Shiny app that plots chicken weight over time for the individual chickens or as a diet average. Furthermore, using the input slider the timeframe of the plot could be adjusted.
 
-The resulting Shiny app is posted on R's free shinyapp.io webpage and can be viewed here: [Chicken Weight Shiny App](https://arjanvanvliet.shinyapps.io/DevelopingDataProductsWeek4/)
+The resulting Shiny app is posted on R's free shinyapp.io webpage and can be viewed here: [Chicken Weight Shiny App](https://arjanvanvliet.shinyapps.io/DevelopingDataProductsWeek4/).
 
-The pitch presentation was created using Slidify and hosted on GitHub pages were it can also be viewed: [Slidify Pitch Presentation](https://arjanvanvliet.github.io/JHU-DataScienceSpecialization/9.%20Developing%20Data%20Products/week4/)
+The pitch presentation was created using Slidify and hosted on GitHub pages were it can also be viewed: [Slidify Pitch Presentation](https://arjanvanvliet.github.io/JHU-DataScienceSpecialization/9.%20Developing%20Data%20Products/week4/).
